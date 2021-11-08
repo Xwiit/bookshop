@@ -1,0 +1,22 @@
+{% extends "catalog/base.html" %}
+<div class="index_main_header">
+
+</div>
+{% block content %}
+        <div class="shop_items">
+            {% for book in books %}
+            <a class="detail_link" href="{% url 'detail-page' pk=book.pk %}">
+                <div class="shop_item">
+                    <img src="{{book.book_cover}}" alt="">
+                    <div class="item_name">{{book.book_title}}</div>
+                    <div class="item_name" style="font-style:italic; color: #b1b3b6;">{{book.book_author}}</div>
+                    <div class="item_price">N600</div>
+                    <div class="item_buttons">
+                        <a class="view_add_to_cart view" href="#"><i class="fas fa-eye"></i> View</a>
+                        <a class="view_add_to_cart add_to_cart" href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+{% endblock content %}

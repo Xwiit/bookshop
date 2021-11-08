@@ -1,0 +1,49 @@
+{% extends "catalog/base.html" %}
+{% load static %}
+
+{% block title %} {{book.book_title}} {% endblock title %}
+  
+{% block content %}
+    <div class="detail_page_container">
+        <div class="book_section">
+            <div class="book_cover">
+                <img src="{{book.book_cover}}" alt="">
+            </div>
+            <div class="add_to_cart">
+                <h1>{{book.book_title}}</h1>
+                <p id="description">{{book.book_description|truncatewords:20}}</p>
+                <p id="price">N{{book.book_price}}</p>
+                <a href="#"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+            </div>
+        </div>
+        <div class="detail_section">
+            <div class="book_detail">
+                <p class="book_detail_p">Book Details</p>
+                <table>
+                    <tr>
+                        <td>Pages</td><td>{{book.book_page}}</td>
+                    </tr>
+                    <tr>
+                        <td>ISBN</td><td>BN56478545</td>
+                    </tr>
+                    <tr>
+                        <td>Released</td><td>1st October, 2021</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="about_the_author">
+                <p class="book_detail_p">About the Author</p>
+                <p class="about_the_author_p">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum delectus quisquam saepe quasi nobis a cupiditate praesentium magni ipsa itaque necessitatibus, 
+                    libero perspiciatis rerum dolorem iure voluptatibus quis distinctio tenetur.
+                </p>
+            </div>
+        </div>
+        <div class="description_section">
+            <h2>Description</h2>
+            <p>
+                {{book.book_description}}
+            </p>
+        </div>
+    </div>
+{% endblock content %}

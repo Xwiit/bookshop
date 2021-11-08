@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;400&family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background: url('../image/books.jpg');
+    background-position: center;
+    background-size: cover;*/
+    background-color: #E9ECEF;
+    margin-top:20vh;
+}
+
+.shop_container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    background: #fff;
+    margin: auto;
+    background-color: #E9ECEF;
+    
+}
+
+.toggle_botton{
+    display: none;
+}
+.user_cart{
+    width: auto;
+    text-align: right;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+   
+}
+.user_cart span{
+    color: #FFFFFF;
+    margin-right: 1.5rem;
+    
+}
+.user_cart span .fas{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.main_header{
+    height: auto;
+    background-color:#03045e;
+    /*background: url('../image/reading.jpg');*/
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.index_main_header{
+    height: 100vh;
+    background: url('../image/reading.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 2rem;
+}
+.mobile_brand{
+    display: none
+}
+.brand_nav_cart{
+    display: flex;
+    justify-content: space-between; 
+}
+.brand_nav_cart .nav_items{
+    list-style: none;
+}
+
+.brand_nav_cart .nav_items li{
+    display: inline-block;
+    margin: 1rem;
+}
+
+.brand_nav_cart .nav_items li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    font-family: 'Gemunu Libre', sans-serif;
+    font-weight: 400;
+}
+.note{
+    margin-top: 10rem;
+    margin-left: 5rem;
+    color: #FFFFFF;
+}
+.note h1{
+    font-size: 3rem;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.note p{
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.brand h2{
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+.brand a{
+    text-decoration:none ;
+}
+
+.search{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search form input{
+    width: 50rem;
+    height: 3rem;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    border: none;
+
+}
+.search form input:focus{
+    outline: none;
+    background-color: #f7f5f5;
+   
+}
+.search form button{
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    font-size: 1.3rem;
+    color: #e63946;
+    color: #FFFFFF;
+    background-color: #03045e;
+}
+.shop_items{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    background-color: #FFFFFF;
+    margin: auto;
+}
+.shop_item{
+    width: 20%;
+    margin: 1rem;
+    padding-bottom: 0.8rem;
+    border: 2px solid #dfdfdf;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 2px 2px 2px 2px #dfdbdb;
+    background: #FFFFFF;
+    overflow: hidden;
+    text-align: center;
+}
+.shop_item img{
+    width: 100%;
+    height: 20rem;
+    object-position: center;
+    object-fit: cover;
+}
+
+.shop_item .item_name,
+.shop_item .item_price{
+    font-family: 'Roboto', sans-serif;
+    color: #023047;
+    padding: 0.3rem;
+    font-weight: 300;
+}
+
+.shop_item .item_price{
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+.detail_link{
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #848688;
+}
+
+.shop_item .view_add_to_cart{
+    text-decoration: none;
+    color: #848688;
+    padding: 0.3rem;
+    border: 1px solid #848688;;
+    margin: 0.3rem;    
+}
+.view{
+    border-radius:  0.3rem 0 0 0.3rem;
+    padding-right: 0;
+    margin-right: 0;
+    width: 40%;
+}
+.add_to_cart{
+    border-radius:  0 0.3rem 0.3rem 0;
+    padding-left: 0;
+    margin-left: 0;
+    width: 40%;
+}
+
+
+.footer{
+    width: 100%;
+    background: #023e8a;
+    background-position: center;
+    background-size: cover;
+    height: 25rem;
+    margin-top: 2rem;
+}
+.mobile_nav{
+    display: none;
+}
+/* detial page style begins here*/
+.detail_page_container{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    background-color: #FFFFFF;
+    height: auto;
+    margin: auto;
+    padding: 2rem;
+}
+.book_section{
+    display: flex;
+    margin: auto;
+    width: 100%;
+}
+.book_cover{
+    width: 50%;
+}
+.book_cover img{
+    width: 100%;
+    height: 70vh;
+    object-fit: contain;
+    object-position: center;
+    
+}
+.add_to_cart{
+    width: 50%;
+}
+.add_to_cart h1{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 1.5rem;
+}
+.add_to_cart p#description{
+    padding: 1.5rem;
+    background-color: #E9ECEF;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+.add_to_cart p#price{
+    padding: 1rem;
+    background-color: #023047;
+    font-family: 'Roboto Mono', monospace;
+    color: #E9ECEF;
+    border-radius: 0.2rem;
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+.add_to_cart a{
+    text-decoration: none;
+    margin-top: 2rem;
+    background-color: #e63946;
+    padding: 0.5rem;
+    color: #E9ECEF;
+}
+.detail_section{
+    display: flex;
+    padding: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+.book_detail_p{
+    font-family: 'Gemunu Libre', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 0;
+}
+.book_detail table{
+    width: 100%;
+    margin: 0.5rem;
+   
+}
+
+.book_detail table tr{
+    background-color:#E9ECEF;
+    padding: 1.5rem;
+    
+}
+.book_detail table tr td{
+    padding: 1rem;
+    font-size: large;
+    
+}
+.detail_section .book_detail,
+.detail_section .about_the_author{
+    width:45% ;
+}
+.about_the_author_p{
+    padding: 1.5rem;
+    padding-right: 0;
+    text-align: justify;
+    padding-top: 0;
+    font-size: large;
+}
+
+.description_section{
+    padding: 2rem;
+    font-size: large;
+    text-align: justify;
+}
+/* Mobile view design */
+
+@media(max-width:60rem){
+    body{
+        background: none;
+    }
+    .shop_container{
+        width: 100%;
+    }
+    .mobile_nav{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100vh;
+        z-index: 100;
+    }
+    .brand{
+        display: flex;
+    }
+    .brand a h2{
+        display: block;
+        width: 80%;
+        margin: auto;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .modal{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .3;
+        background: black;
+    }
+    .main_header{
+        height: 15vh;
+        background-color:#03045e;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+    }
+    .small_header{
+        height: auto;
+        background: #e63946;
+    }
+    .brand_nav_cart{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .brand_nav_cart h2{
+        font: 1rem;
+    }
+    .toggle_botton{
+        display: block;
+        width: 1.8rem;
+        height: 2rem;
+        background: transparent;
+        margin-left: 0.5rem;
+        border: 0;
+    }
+    .toggle_botton span{
+        display: inline-block;
+        width: 100%;
+        background: #FFFFFF;
+        height: 0.1rem;
+        margin: 1px;
+    }
+    .small_header h5,
+    #small_header_email,
+    #small_header_contact{
+        display: none;
+    }
+    .shop_items{
+        width: 100%;
+        margin: auto;
+    } 
+    .shop_item{
+        width: 50%;
+        padding-bottom: 0.5rem;
+        border:2px solid #f1faee;
+        border-radius:0;
+        text-align: center;
+        background: #FFFFFF;
+        overflow: hidden;
+        margin: 0;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    .shop_item img{
+        width: 100%;
+        height: 10rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .shop_item .item_name,
+    .shop_item .item_price{
+        font-family: 'Roboto', sans-serif;
+        color: #023047;
+        padding: 0.1rem;
+        font-weight: 300;
+    }
+    .shop_item .item_name,
+    .shop_item .item_price{
+        font-family: 'Roboto', sans-serif;
+        color: #023047;
+        padding: 0.3rem;
+        font-size: 1rem;
+        
+    }
+    .shop_item a{
+        text-decoration: none;
+        color: #bec1c2;
+        padding: 0.3rem;
+        border-radius: 0.3rem;
+        margin: 1px;
+        background-color: transparent; 
+    }
+    .item_buttons{
+        display: flex;
+        flex-direction: column;
+    }
+    .view_add_to_cart{
+        display: block;
+        width: 100%;
+    }
+    .note{
+        display: none;
+    }
+    .search{
+        width: 100%;
+        height: auto;
+        padding: 0.5rem;
+        margin: 0.5rem auto;
+    }
+    .search form{
+        width: 100%;
+
+    }
+    .search form input{
+        width: 80%;
+        height: 2rem;
+        font-size: 1rem;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        border: none;
+        border-radius: 0.5rem;
+    }
+    .search form button{
+        width: 2.5rem;
+        font-size: 1rem;
+        height: 2rem;
+        border: none;
+
+    }
+    .mobile_brand{
+        display: block;
+        margin:3rem auto;
+        text-align: center;
+
+    }
+    .mobile_brand h4{
+        color: #FFFFFF;
+        font-size: 2rem;
+        font-family: 'Gemunu Libre', sans-serif;
+    }
+    .brand h2{
+        display: none;
+    }
+    .nav_items{
+        display: none;
+    }
+
+    /* Detail page for mobile view begins here*/
+    .book_section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .book_section .book_cover{
+        width: 100%;
+    }
+    .book_section .add_to_cart{
+        width: 100%;
+        
+    }
+    .detail_section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .book_detail{
+        width: 100%;
+    }
+    .detail_section .book_detail,
+    .detail_section .about_the_author{
+    width:100% ;
+}
+    .book_detail_p{
+        width: 100%;
+        font-size:x-large;
+        display: block;
+    }
+    .book_detail table{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .footer{
+        height: 10rem;
+    }
+}
